@@ -34,6 +34,37 @@ typedef struct {
   unsigned int line;
 } lexer_t;
 
+string string_of_token_t(token_t type) {
+  switch (type) {
+  case LCRLY:
+    return "LCRLY";
+  case RCRLY:;
+    return "RCRLY";
+  case LSQR:;
+    return "LSQR";
+  case RSQR:;
+    return "RSQR";
+  case ID:;
+    return "ID";
+  case COMMA:;
+    return "COMMA";
+  case COLON:;
+    return "COLON";
+  case TRUE:;
+    return "TRUE";
+  case FALSE:;
+    return "FALSE";
+  case NUL:;
+    return "NUL";
+  case NUM:;
+    return "NUM";
+  case STR:;
+    return "STR";
+  default:
+    return "Unknown type";
+  }
+}
+
 typedef tuple<string, token_t, unsigned int> token;
 
 typedef enum { QUIET, INFO, WARN, ERROR, DEBUG } loglvl_t;
@@ -147,8 +178,12 @@ vector<token> lex(lexer_t lexer, const string *src) {
 void print_tokens(vector<token> *tokens) {
   token t;
   string msg = "Tokens:\n";
+  string token_type;
   for (vector<token>::size_type i = 0, n = size(*tokens); i < n; i++) {
-    msg += format("({}, {}, {})", (*tokens)[i].get(0), (*tokens).at(i)[1], );
+    token_type = string_of_token_t(get<1>((*tokens)[i]));
+    msg += format("(value: {}, type: {}, line: {})", get<0>((*tokens)[i]),
+                  token_type, get<2>((*tokens)[i]));
+    msg += "\n";
   }
   log(nullptr, QUIET, msg);
 }

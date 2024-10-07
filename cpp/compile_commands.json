@@ -11,9 +11,9 @@
       "main",
       "main.cpp"
     ],
-    "directory": "/home/tib/dev/jsonpp",
-    "file": "/home/tib/dev/jsonpp/main.cpp",
-    "output": "/home/tib/dev/jsonpp/main"
+    "directory": "/home/tib/dev/kata_json/cpp",
+    "file": "/home/tib/dev/kata_json/cpp/main.cpp",
+    "output": "/home/tib/dev/kata_json/cpp/main"
   },
   {
     "arguments": [
@@ -46,8 +46,8 @@
       "-tune-cpu",
       "generic",
       "-debugger-tuning=gdb",
-      "-fdebug-compilation-dir=/home/tib/dev/jsonpp",
-      "-fcoverage-compilation-dir=/home/tib/dev/jsonpp",
+      "-fdebug-compilation-dir=/home/tib/dev/kata_json/cpp",
+      "-fcoverage-compilation-dir=/home/tib/dev/kata_json/cpp",
       "-resource-dir",
       "/usr/lib/clang/18",
       "-internal-isystem",
@@ -86,11 +86,11 @@
       "-x",
       "c++",
       "-o",
-      "/tmp/main-1afccf.o",
+      "/tmp/main-8e102a.o",
       "main.cpp"
     ],
-    "directory": "/home/tib/dev/jsonpp",
-    "file": "/home/tib/dev/jsonpp/main.cpp",
-    "output": "/tmp/main-1afccf.o"
+    "directory": "/home/tib/dev/kata_json/cpp",
+    "file": "/home/tib/dev/kata_json/cpp/main.cpp",
+    "output": "/tmp/main-8e102a.o"
   }
 ]
