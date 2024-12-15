@@ -1,6 +1,6 @@
 # Kata
 
-Maintain, develop and enrich my form.
+Maintain, develop and enrich my form.  
 Various programming languages.
 
 ## *Implementation goals*
