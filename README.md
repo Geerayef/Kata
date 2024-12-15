@@ -1,6 +1,7 @@
 # Kata
 
-Maintain, develop and enrich my form in various languages by reading JSON.
+Maintain, develop and enrich my form.
+Various programming languages.
 
 ## *Implementation goals*
 

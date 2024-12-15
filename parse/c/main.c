@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
     exit(EXIT_FAILURE);
   }
 
-  // Allocate enought memory to store the contents of the given file.
+  // Allocate enough memory to store the contents of the given file.
   char *psrc = NULL;
   psrc = malloc(sizeof(char) * (bufsize + 1));
 
