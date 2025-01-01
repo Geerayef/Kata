@@ -24,10 +24,7 @@ typedef enum {
   STR
 } token_t;
 
-typedef struct {
-  unsigned int start;
-  unsigned int end;
-} lexeme_t;
+typedef tuple<string, token_t, unsigned int> token;
 
 typedef struct {
   unsigned long cursor;
@@ -38,34 +35,32 @@ string string_of_token_t(token_t type) {
   switch (type) {
   case LCRLY:
     return "LCRLY";
-  case RCRLY:;
+  case RCRLY:
     return "RCRLY";
-  case LSQR:;
+  case LSQR:
     return "LSQR";
-  case RSQR:;
+  case RSQR:
     return "RSQR";
-  case ID:;
+  case ID:
     return "ID";
-  case COMMA:;
+  case COMMA:
     return "COMMA";
-  case COLON:;
+  case COLON:
     return "COLON";
-  case TRUE:;
+  case TRUE:
     return "TRUE";
-  case FALSE:;
+  case FALSE:
     return "FALSE";
-  case NUL:;
+  case NUL:
     return "NUL";
-  case NUM:;
+  case NUM:
     return "NUM";
-  case STR:;
+  case STR:
     return "STR";
   default:
     return "Unknown type";
   }
 }
-
-typedef tuple<string, token_t, unsigned int> token;
 
 typedef enum { QUIET, INFO, WARN, ERROR, DEBUG } loglvl_t;
 
